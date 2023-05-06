@@ -2,6 +2,8 @@
 # xgolia
 if you found leaked algolia keys this script will help you to test and check them
 Simple python Script to scan leaked algolia keys if misconfigured or not
+# Version
+- Python : 3.10+
 # Required library
 - colorama==0.4.6
 - requests==2.28.2
