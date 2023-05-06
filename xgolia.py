@@ -47,11 +47,11 @@ try:
         if aclscount == 1:
             for aclsc in acls:
                 if "search" in aclsc:
-                    pass
+                    break;
         else:
-            is_vuln + 1
+            is_vuln = is_vuln + 1
 
-        if is_vuln > 0:
+        if is_vuln == 1:
             print(red, " [-] This keys is misconfigured")
         else:
             print(red, " [-] This keys is not misconfigured")
@@ -59,7 +59,7 @@ try:
         # Get Permissions
         print(green, " [+] Permissions : ")
         for acls in tojson['acl']:
-            print(blue, " [+] you can : ", acls)
+            print(blue, " [+] ", acls)
 
         # get Indexes
         print(green, " [+] Indexes : ", )
@@ -72,5 +72,3 @@ try:
 
 except Exception as er:
     print(red, " [-] Error : ", er)
-
-
